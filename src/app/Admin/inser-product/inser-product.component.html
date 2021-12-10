@@ -1,0 +1,45 @@
+
+<div  class="row">
+
+    <form (ngSubmit)="insertproduct()" class="col-6 m-auto">
+      <br>
+      <h1 class="text-danger">Add Product</h1>
+
+        <div class="mb-2  mt-3">
+            <label for="cat" class="form-label">Select Category:</label>
+            <select class="form-control" name="cat" id="cat" [(ngModel)]="product.CateogryID" >
+              <option *ngFor="let item of category" [value]="item.id">
+                  {{item.Name}}
+                </option>
+            </select>
+          </div>
+
+        <div  class="mb-2">
+          <small id="helpId" class="form-text text-muted">ID</small>
+          <input type="number" class="form-control"  [(ngModel)]="product.id"name="ID" id="ID" aria-describedby="helpId" placeholder="ID:">
+        </div>
+        <div class="mb-2">
+             <small id="helpId" class="form-text text-muted">Name</small>
+            <input type="text" class="form-control"  [(ngModel)]="product.Name" name="Name" id="Name" aria-describedby="helpId" placeholder="Name:">
+          </div>
+        
+          <div class="mb-2">
+            <small id="helpId" class="form-text text-muted">Quantity</small>
+            <input type="number" class="form-control"   [(ngModel)]="product.Quantity" name="Quantity" id="Quantity" aria-describedby="helpId" placeholder="Quantity:">
+          </div>
+          <div class="mb-2">
+            <small id="helpId" class="form-text text-muted">Price</small>
+            <input type="number" class="form-control" [(ngModel)]="product.Price" name="Price" id="Price" aria-describedby="helpId" placeholder="Price:">
+          </div>
+          <div class="mb-2">
+            <small id="helpId" class="form-text text-muted">Select Image</small>
+            <input type="file" class="form-control" name="ImgURL"  accept=".jpg, .jpeg, .png" [(ngModel)]="urlimg" id="ImgURL" aria-describedby="helpId" placeholder="ImgURL:">
+          </div>
+
+          <div class="d-grid gap-2">
+            <button type="submit" name="sub" id="sub" class="btn btn-danger">Add Product</button>
+          </div>
+
+    </form>
+
+</div>

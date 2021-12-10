@@ -1,0 +1,138 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "Name": "headphone1",
+      "Quantity": 55,
+      "Price": 255,
+      "Img": "../../assets/images/headphone1.jpg",
+      "CateogryID": 1
+    },
+    {
+      "id": 2,
+      "Name": "headphone2",
+      "Quantity": 5,
+      "Price": 300,
+      "Img": "../../assets/images/headphone2.jpg",
+      "CateogryID": 1
+    },
+    {
+      "id": 3,
+      "Name": "headphone3",
+      "Quantity": 1,
+      "Price": 580,
+      "Img": "../../assets/images/headphone3.jpg",
+      "CateogryID": 1
+    },
+    {
+      "id": 4,
+      "Name": "printer1",
+      "Quantity": 88,
+      "Price": 3000,
+      "Img": "../../assets/images/printer1.jpg",
+      "CateogryID": 2
+    },
+    {
+      "id": 5,
+      "Name": "printer2",
+      "Quantity": 491,
+      "Price": 1750,
+      "Img": "../../assets/images/printer2.jpg",
+      "CateogryID": 2
+    },
+    {
+      "id": 6,
+      "Name": "printer3",
+      "Quantity": 5,
+      "Price": 2100,
+      "Img": "../../assets/images/printer3.jpg",
+      "CateogryID": 2
+    },
+    {
+      "id": 7,
+      "CateogryID": "3",
+      "Name": "iphone 7+",
+      "Quantity": 11,
+      "Price": 5600,
+      "Img": "../../assets/images/61SYMgcwBzL._AC_SL1500_.jpg"
+    },
+    {
+      "id": 8,
+      "CateogryID": "3",
+      "Name": "samsung ",
+      "Quantity": 14,
+      "Price": 3200,
+      "Img": "../../assets/images/61VzZozPuxL._AC_SL1000_.jpg"
+    },
+    {
+      "id": 9,
+      "CateogryID": "3",
+      "Name": "iphone 8+",
+      "Quantity": 65,
+      "Price": 8500,
+      "Img": "../../assets/images/3112YH2TbwL._AC_.png"
+    },
+    {
+      "id": 10,
+      "CateogryID": "1",
+      "Name": "Headphone 4",
+      "Quantity": 178,
+      "Price": 323,
+      "Img": "../../assets/images/31fXiwVIxNL._AC_.jpg"
+    },
+    {
+      "id": 11,
+      "CateogryID": "1",
+      "Name": "Headphone 5",
+      "Quantity": 1560,
+      "Price": 289,
+      "Img": "../../assets/images/313oLCHBh6L._AC_.jpg"
+    },
+    {
+      "id": 12,
+      "CateogryID": "2",
+      "Name": "printer 4",
+      "Quantity": 91,
+      "Price": 2540,
+      "Img": "../../assets/images/41obafqX4yL._AC_.jpg"
+    },
+    {
+      "id": 13,
+      "CateogryID": "2",
+      "Name": "printer 5",
+      "Quantity": 14,
+      "Price": 4200,
+      "Img": "../../assets/images/61BmqNOP22L._AC_SL1500_.jpg"
+    },
+    {
+      "id": 14,
+      "CateogryID": "3",
+      "Name": "samsung 2",
+      "Quantity": 23,
+      "Price": 3650,
+      "Img": "../../assets/images/51yFDwxcRlL._AC_SL1091_.jpg"
+    },
+    {
+      "id": 17,
+      "CateogryID": "3",
+      "Name": "iphone 7+++++",
+      "Quantity": 17,
+      "Price": 6200,
+      "Img": "../../assets/images/61SYMgcwBzL._AC_SL1500_.jpg"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "Name": "Headphones"
+    },
+    {
+      "id": 2,
+      "Name": "Printes"
+    },
+    {
+      "id": 3,
+      "Name": "Mobiles"
+    }
+  ]
+}

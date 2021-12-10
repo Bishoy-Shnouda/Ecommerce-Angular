@@ -1,0 +1,32 @@
+<label for="select" class="m-2">Select Category:</label>
+<select class="form-control mb-2 " id="select" value="Selectitem" #Selectitem [(ngModel)]="selectedCategoryID">
+  <option *ngFor="let item of Cateogry" [value]=item.id>
+    {{item.Name}}
+  </option>
+</select>
+
+<app-order-detiles [selectedcatid]="selectedCategoryID" 
+(shoppingCartItemsSelected)="shoppingCartItemsChanged($event)">
+</app-order-detiles>
+<br>
+<br>
+<div class="container">
+
+  <h4>shoppingCartItems</h4>
+  <div class="row">
+    <div class="float-start m-4" style="width: 20vw; " *ngFor="let p of shoppingCartItems">
+      <div class="card col-12 " *ngIf="p.SelectedQuantity>0">
+        <img src="{{p.Img}}" class="card-img-top" style="width: 18.3vw; height: 42vh;">
+        <div class="card-body">
+          <h5 class="card-title"> {{p.Name}} </h5>
+          <h6 class="card-title "> Quantity: {{p.SelectedQuantity}} </h6>
+          <p class="card-text">Price: {{p.Price | currency :'EGP'}}</p>
+          <p class="card-text">and Tax value: (14%) </p>
+          <p class="card-text">Total Price: {{p.TotalPrice | currency :'EGP'}}</p>
+
+        </div>
+        <!-- <button (click)="Buy(p.ID,p.SelectedQuantity)" class="btn btn-danger">Buy</button> -->
+      </div>
+    </div>
+  </div>
+</div>

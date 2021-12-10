@@ -1,0 +1,55 @@
+
+<h1>welcome</h1>
+<br>
+<h3 [hidden]="showlogo">We offer an explicit discount of: {{Discountvalue}} %</h3> 
+<button class="btn btn-danger" (click)="toggelimg()">Show / Hide </button>
+
+<br>
+<br>
+
+<select class="btn btn-secondary dropdown-toggle" name="" id="" [(ngModel)]="catid">
+  <option *ngFor="let item of Cateogry" [value]=item.id>
+    {{item.Name}}
+  </option>
+</select>
+
+<br>
+<br>
+
+<table [hidden]="IsPurshased" class="table ">
+  <thead class="bg-primary text-light">
+    <tr>
+
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image</th>
+
+    </tr>
+  </thead>
+  
+
+  <!-- <tbody *ngFor="let p of ProductList  " [ngStyle]="{'background-color': (p.Quantity==1)? 'yellow' : 'gray'}">
+    <tr *ngIf="catid==p?.CateogryID && p.Quantity>0 ">
+      <td>{{p?.id}}</td>
+      <td>{{p?.Name}}</td>
+      <td>{{p?.Quantity}}</td>
+      <td>{{p?.Price}}</td>
+      <td><img src="{{p.Img}}" width="50" height="50" alt=""></td>
+
+
+    </tr>
+
+  </tbody> -->
+
+</table>
+
+<h3 [hidden]="!IsPurshased">Thanks for purchasing from our Store {{clientName}}</h3>
+
+<div class="mb-3">
+  <label for="name" class="form-label">Enter Name</label>
+  <input type="text" [(ngModel)]="clientName" class="form-control" name="" id="name" aria-describedby="helpId"
+    placeholder="Name...">
+</div>
+<button class="btn btn-danger" (click)="toggelBuy()">Buy</button>

@@ -1,0 +1,68 @@
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="float-start m-4" style="width: 20vw; " *ngFor="let p of ProductListselectedCategory">
+      <div class="card col-12 " *ngIf="p.Quantity>0" appProductshadow="lightgreen">
+        <img src="{{p.Img}}" class="card-img-top" style="width: 18.3vw; height: 42vh;">
+        <div class="card-body">
+          <h5 class="card-title"> {{p.Name}} </h5>
+          <h6 class="card-title "> Quantity: {{p.Quantity}} </h6>
+          <p class="card-text">{{p.Price | currency :'EGP'}}</p>
+          <div class="row">
+            <button class="btn btn-primary" style="width: 24.5%;"
+              (click)="decreaseQuantity(p.id,p.Price,quantity)">-</button>
+            <input type="number" style="width: 50%;" min="1" #quantity class="form-control">
+            <button class="btn btn-primary" style="width: 24.5%;"
+              (click)="increaseQuantity(p.id,p.Price,quantity)">+</button>
+
+          </div>
+          <div class="d-grid gap-2">
+            <br>
+            <button type="button" (click)="displayProduct(p.id)" class="btn btn-dark">Display</button>
+            <button type="button" (click)="displayProductWithQuntaty(p.id,p.Quantity)" class="btn btn-dark">Display With
+              Quantity</button>
+          </div>
+          <br>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div> -->
+
+
+
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">
+    <div class="col mb-5 " *ngFor="let p of ProductListselectedCategory">
+      <div class="card radius-15"
+       *ngIf="p.Quantity>0" appProductshadow="lightgreen"
+      [ngClass]="{'bg-warning': p.CateogryID==1, 'bg-info' : p.CateogryID==2 ,'bg-danger text-light' : p.CateogryID==3 }" >
+        <div class="card-body text-center">
+          <div class="radius-15">
+            <img src="{{p.Img}}" width="200" height="200" class="radius-15 mb-2 shadow bg-white" alt="">
+            <h3 class="card-title mb-2"> {{p.Name}} </h3>
+            <h6 class="card-title "> Quantity: {{p.Quantity}} </h6>
+            <p class="card-text">{{p.Price | currency :'EGP'}}</p>
+            <div class="row mb-2">
+              <button class="btn btn-primary" style="width: 24.5%;"
+                (click)="decreaseQuantity(p.id,p.Price,quantity)">-</button>
+              <input type="number" style="width: 50%;" min="1" #quantity class="form-control">
+              <button class="btn btn-primary" style="width: 24.5%;"
+                (click)="increaseQuantity(p.id,p.Price,quantity)">+</button>
+            </div>
+              <div class="d-grid mb-2"> <a (click)="displayProduct(p.id)"  class="btn btn-white radius-15">Display</a>
+              </div>
+              <div class="d-grid"> <a (click)="displayProductWithQuntaty(p.id,p.Quantity)"  class="btn btn-white radius-15">Display With Quantity</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+   
+  </div>
+</div>
